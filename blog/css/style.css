@@ -1,0 +1,256 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+
+/*Imported Fonts*/
+
+@font-face{
+    font-family: "shrek-font";
+    src: url('../fonts/Shrek.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(../fonts/sans-serif/roboto-regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "lato";
+    src: url(../fonts/sans-serif/lato-regular.ttf) format('truetype');
+    font-weight: normal;
+    font-style: normal
+}
+
+/* Typography */
+
+p {
+    font-family: lato, Arial, sans-serif;
+}
+
+h1, h2, h3, h4 {
+    font-family: roboto, Times, serif;
+    letter-spacing: 0.0325rem;
+}
+
+h1 {
+    font-size: 3rem;
+    letter-spacing: 0.25rem;
+    transform: rotate(-5deg);
+    text-align: center;
+}
+
+
+.highlight {
+    font-family: shrek-font, Impact, sans-serif;
+    display: inline-block;
+    border: 1px solid black;
+    padding: 1rem 1.75rem;
+    border-radius: 0.3rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color:#555956;
+    background-color: #C4D300;
+    box-shadow: 5px 5px 4px -1px rgb(37, 37, 37);
+}
+
+/* General setup and defaults */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size:16px;
+}
+
+body {
+    margin: 1.5rem auto;
+    width:90%;
+    min-width:56.25rem;
+}
+
+
+/* Layout */
+header {
+    padding: 0.5rem 0rem 2rem 0rem;
+}
+
+nav {
+    margin-top: 1rem;
+}
+
+.main-section {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-gap: 1rem;
+}
+
+article {
+    grid-column: 1 / 2;
+    grid-row: 1;
+}
+
+aside {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    border-left: 1.5px solid #555956;
+    padding-left: 1rem;
+}
+
+aside p {
+    border-bottom: 1.5px solid #555956;
+    padding-bottom: 0.75rem;
+    padding-top: 1rem;
+}
+.expand {
+    font-size: .3rem;
+}
+
+.subsection {
+    display: flex;
+}
+
+/* Images and Figures */
+
+img {
+    width: 100%
+}
+
+figure {
+    margin: 0px;
+
+}
+
+.article-image {
+    width: 33%;
+    float: left;
+    margin-right: 0.75rem;
+}
+.subsection {
+    margin: 1rem 0rem;
+}
+
+.subsection figure{
+    margin: 0rem 0.25rem;
+    background-color: antiquewhite;
+}
+
+.subsection figure figcaption{
+    padding-bottom: 0.5rem;
+    padding-left: .5rem;
+    font-family: roboto;
+    font-size: .9rem;
+}
+
+/* Links and Nav */
+
+a {
+    text-decoration: none;
+}
+
+nav a {
+    display: inline-block;
+    padding: 1.25rem 2rem;
+    font-size: 1.5rem;
+    font-family: shrek-font, Arial, Helvetica;
+    color: #C4D300;
+}
+
+nav {
+    border-top: 1.5px solid #555956;
+    border-bottom: 1.5px solid #555956;
+}
+a:link {
+    color: #7575a1;
+
+}
+
+nav a:focus, nav a:hover {
+    color: #C4D300;
+    background-color: #555956;
+}
+
+nav a:active {
+    color: #C4D300;
+    background-color: #555956;
+}
+
+
+.copyright {
+    text-align: left;
+    color: #555956;
+}
+.attribution {
+    text-align: right;
+    font-size: .75rem;
+    color: #555956;
+}
+
+button {
+    background-color: #C4D300;
+    padding: 1rem 2rem;
+    font-family: shrek-font;
+    font-size: 1.5rem;
+    color: #555956;
+    border-color: #C4D300;
+    border-radius: 1rem;
+}
+
+.copyright {
+    color: #000000;
+    font-family: roboto, 'Times New Roman', Times, serif;
+}
+
+.attribution {
+    color: #000000;
+    font-family: roboto, 'Times New Roman', Times, serif;
+}
